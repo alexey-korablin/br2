@@ -1,0 +1,1 @@
+export { StyledArticle } from './EventBlock';

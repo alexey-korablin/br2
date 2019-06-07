@@ -31,3 +31,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* FullScreen tile */
+
+.full-screen-tile {
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  color: #aaa;
+}
+
+.full-screen-tile__date-header {
+  font-size: 45px;
+}
