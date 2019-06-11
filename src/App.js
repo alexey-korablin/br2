@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 // import logo from './logo.svg';
 import { StyledHeader, StyledSpan } from './App.styled';
-import { StyledArticle } from './bigTile/EventBlock';
+import { EventBlock } from './EventBlock';
 import './App.css';
 
 const monthsMap = {
@@ -61,6 +61,7 @@ function DateHeader() {
 
 const data = [
   {
+    id: 1,
     contactType: 'closeRelative',
     subject: {
       name: 'Sara',
@@ -69,7 +70,7 @@ const data = [
     birth: -646542000000,
     gender: 'female',
     contacts: {
-      phone: 111111111,
+      phone: 123456789,
       email: 'grandma@example.com',
       social: [
         {
@@ -79,6 +80,7 @@ const data = [
     }
   },
   {
+    id: 2,
     contactType: 'teammate',
     birth: -204778800000,
     gender: 'male',
@@ -94,6 +96,7 @@ const data = [
     }
   },
   {
+    id: 3,
     contactType: 'other',
     birth: 0,
     contacts: {
@@ -110,8 +113,11 @@ function App() {
       <DateHeader></DateHeader>
     </StyledHeader>
     <main>
-      <StyledArticle closeRelative value={data}>test
-      </StyledArticle>
+      {data.map(item => {
+        return (<EventBlock key={item.id} value={item}>
+          test
+        </EventBlock>);
+      })}
       {/* <StyledArticle teammate>
         <header>
           <h2>Today is your teammate Fill's birthday! Don't forget to congrat him!</h2>

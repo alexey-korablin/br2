@@ -11,7 +11,7 @@ const StyledSpan = styled.span`
   padding: ${props => props.weekday ? '12px 20px 12px 40px' : '12px 0'};
 `;
 
-export { StyledHeader, StyledSpan }
+export { StyledHeader, StyledSpan};
 
 /*
 color: ${props => props.color};
