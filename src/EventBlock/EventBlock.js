@@ -12,16 +12,38 @@ const StyledArticle = styled.article`
         console.log(props);
         switch(props.contact) {
             case 'closeRelative':
-                console.log('30px solid #de4307');
+                // console.log('30px solid #de4307');
                 return '30px solid #de4307';
             case 'teammate':
-                console.log('30px solid #de4307');
+                // console.log('30px solid #de4307');
                 return '30px solid #f6d04d';
             default:
                 return '30px solid #8bc24c';
         }
     }};
 `
+
+const EventHeader = ({ subject, gender }) => {
+    // console.log(subject, gender);
+    let message = 'Pay attention!'
+    if (subject.relationship !== 'unknown') {
+        message = `Your ${subject.relationship} ${subject.name} today celebrates ${gender === 'male' ? 'his': 'her'} birthday!`
+    }
+    return (<header>
+        <h2>{message}</h2>
+    </header>)
+}
+
+function getTypeOfDate(date) {
+    return null;
+}
+
+const EventMessage = ({ relationship, birth }) => {
+    console.log(relationship, birth);
+    return (<div>
+        <p>Your grandmother today is 70! This is big aniversary!</p>
+    </div>)
+}
 
 const Phone = ({phone}) => {
     const number = phone;
@@ -33,21 +55,20 @@ const Phone = ({phone}) => {
 }
 
 export const EventBlock = (props) => {
-    console.log(props);
-    const {phone, email, site, social} = props.value.contacts;
+    // console.log(props);
+    const {phone, email} = props.value.contacts;
+    const social = props.value.contacts.site || props.value.contacts.social[0]['vk']
     const contactType = props.value.contactType;
     return (
         <StyledArticle contact={contactType}>
-            <header>
-                <h2>Today is your grandmother's birthday! Don't forget to congrat her!</h2>
-            </header>
-            <div>
-                <p>Your grandmother today is 70! This is big aniversary!</p>
-            </div>
+            <EventHeader subject={props.value.subject} gender={props.value.gender}>
+            </EventHeader>
+            <EventMessage relationship={props.value.subject.relationship} birth={props.value.birth}>
+            </EventMessage>
             <footer>
                 <p>Actual contacts here: <Phone phone={phone}></Phone>, 
                     e-mail: {email}, 
-                    socials: {site}</p>
+                    socials: {social}</p>
                 <p>{contactType}</p>
             </footer>
         </StyledArticle>

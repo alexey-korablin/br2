@@ -82,6 +82,10 @@ const data = [
   {
     id: 2,
     contactType: 'teammate',
+    subject: {
+      name: 'Bob',
+      relationship: 'friend',
+    },
     birth: -204778800000,
     gender: 'male',
     contacts: {
@@ -98,6 +102,10 @@ const data = [
   {
     id: 3,
     contactType: 'other',
+    subject: {
+      name: 'unknown',
+      relationship: 'unknown',
+    },
     birth: 0,
     contacts: {
       phone: 333333333,
