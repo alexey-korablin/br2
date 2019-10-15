@@ -1,0 +1,18 @@
+.welcome {
+    background-color: #dddddd;
+    color: #222222;
+}
+
+.settings {
+    background-color: #dddddd;
+    color: #222222;
+}
+
+.game {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.hidden {
+    display: none;
+}
