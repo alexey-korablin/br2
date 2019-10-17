@@ -1,3 +1,17 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+button {
+    background-color: transparent;
+    padding: 12px;
+    border: 1px solid #F75940;
+    color: inherit;
+    outline: none;
+}
+
 .welcome {
     background-color: #dddddd;
     color: #222222;
@@ -15,4 +29,48 @@
 
 .hidden {
     display: none;
+}
+
+/* .dark {
+    
+} */
+
+.mode-button {
+    position: fixed;
+    top: 10%;
+    left: 90%;
+}
+
+.mode-button.dark {
+    color: #3dc7be;
+}
+
+.dark.welcome {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #334252;
+    color: #3dc7be;
+    
+}
+
+.dark.welcome h1 {
+    font-size: 4rem;
+    margin-bottom: 0.4rem;
+}
+
+.dark.welcome p {
+    font-size: 2rem;
+}
+
+.dark.welcome button {
+    font-size: 1rem;
+}
+
+.dark.welcome button:hover {
+    background-color: #364857;
+    cursor: pointer;
 }

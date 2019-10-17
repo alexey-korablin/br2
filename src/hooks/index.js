@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export const useMode = () => {
     const [darkMode, setDarkMode] = useState(false);
-    return { darkMode, setDarkMode }
+    return { darkMode, setDarkMode };
 };
 
 export const usePhase = () => {
