@@ -39,10 +39,15 @@ button {
     position: fixed;
     top: 10%;
     left: 90%;
+    cursor: pointer;
 }
 
 .mode-button.dark {
     color: #3dc7be;
+}
+
+.mode-button.dark:hover {
+    background-color: #364857;
 }
 
 .dark.welcome {
