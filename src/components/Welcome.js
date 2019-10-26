@@ -23,7 +23,7 @@ export const Welcome = () => {
         className={calculateClassName(currentPhase, OWN_PHASE, darkMode)}
     >
         <h1>Welcome to the <span>Keep Talking</span> game!</h1>
-        <p>To start the game click "Start"</p>
+        <p>To start click "Start the Game" button</p>
         <button onClick={() => setPhase(phase + 1)}>Start the Game</button>
     </div>
 );}
